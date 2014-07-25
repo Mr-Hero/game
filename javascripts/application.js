@@ -44,14 +44,7 @@ function draw(){
 }
 
 function initUI(){
-	/*
-	canvas.onclick = function(event){
-		onGridClicked(event);
-	}
-	*/    //ok
 	canvas.onclick = onGridClicked;  //ok
-	
-	//$(canvas).click(onGridClicked);   //fail  why ?
 	$("#bricks-container button").click(function(event){
 		event.preventDefault();
 
