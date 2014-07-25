@@ -1,1 +1,14 @@
 // the game main uses canvas and dom, realizes clear, save, load and tracks functions. 
+// index.html
+// + stylesheets
+//	 --style.css
+// + javascripts
+// |     --applicaiton.js
+// |	 --grid.js
+// |	 --juqery-1.11.1min.js
+// |     --store.js
+// |     + bricks
+//     	 |	--circle.js
+//     	 |	--triangle.js
+//     	 |	--curve.js
+//     	 |	--square.js
