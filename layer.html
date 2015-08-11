@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"> 
+</head>
+<body>
+<canvas id="grid"></canvas>
+</body>
+<script type="text/javascript" src="javascripts/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var cav = document.getElementById("grid");
+	var context = cav.getContext("2d");
+	var col = 16, row = 16 , size = 30;
+	draw(context, col, row, size);
+	init(cav);
+	
+});
+
+// initial the canvas  >>
+function init(cav){
+	/*
+	$(cav).click(function(e){
+		var x = e.offsetX || e.layerX;
+		alert(x);
+	});
+    */
+    //=============================
+    cav.onclick = function(e){
+    	var x = e.offsetX || e.layerX;
+		alert(x);
+    }
+    
+}
+
+function draw(context, col, row, size){
+
+	var w = col*size, h = row*size;
+
+	context.strokeRect(0, 0, w, h);
+	context.beginPath();
+	for (var column = 0; column < col; column++) {
+		context.moveTo(column*size, 0);
+		context.lineTo(column*size, h);
+	}
+
+	for (var r = 0; r < row; r++) {
+		context.moveTo(0,r*size);
+		context.lineTo(w,r*size);
+	}
+
+	context.stroke();
+}
+
+</script>
+</html>
